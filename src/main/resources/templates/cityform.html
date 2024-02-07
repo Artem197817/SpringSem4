@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>City</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+<img th:src="@{/images/city.jpg}" alt="gh" width="300"/>
+<h1>City</h1>
+<h2>View city</h2>
+<table>
+    <tr>
+        <th>CITY NAME</th>
+        <th>CITY POPULATION SIZE</th>
+    </tr>
+    <tr th:each="c: ${city}" >
+        <td th:text="${c.name}"></td>
+        <td th:text="${c.populationSize}"></td>
+    </tr>
+</table>
+<h2>Add a city</h2>
+<form action="/city/city" method="post">
+    Name: <input type="text" name="name"><br />
+    Population Size: <input type="number" step="any" name="populationSize"><br />
+    <button type="submit">Add city</button>
+</form>
+</body>
+</html>
