@@ -3,6 +3,7 @@ package GB.SpringSem4.controller;
 import GB.SpringSem4.model.City;
 import GB.SpringSem4.service.CityService;
 import lombok.AllArgsConstructor;
+import lombok.extern.java.Log;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @AllArgsConstructor
 @RequestMapping("/city")
+@Log
 public class CityController {
 
     private CityService cityService;
